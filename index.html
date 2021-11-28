@@ -1,303 +1,378 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <link rel="apple-touch-icon" sizes="180x180" href="_meta/_fav/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="_meta/_fav/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="_meta/_fav/favicon-16x16.png">
-  <link rel="manifest" href="_meta/_fepicav/site.webmanifest">
-  <link rel="mask-icon" href="_meta/_fav/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="apple-touch-icon" sizes="180x180" href="_meta/_fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="_meta/_fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="_meta/_fav/favicon-16x16.png">
+    <link rel="manifest" href="_meta/_fepicav/site.webmanifest">
+    <link rel="mask-icon" href="_meta/_fav/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 
-  <title>ML Models</title>
+    <title>ML Models</title>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KFXM4297HZ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-KFXM4297HZ');
-  </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3842615578259450"
+     crossorigin="anonymous"></script>
 
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<style>
-    body {padding-top: 56px;};
-    body {font-family: 'Muli', sans-serif;};
-    .bg-dark{background-color:#29527b}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-KFXM4297HZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-KFXM4297HZ');
+    </script>
 
-</style>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-  <link href="static/css/body.css" rel="stylesheet">
-  <link rel="apple-touch-icon" sizes="180x180" href="static/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="static/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="static/favicon/favicon-16x16.png">
+    <style>
+      body {
+        padding-top: 56px;
+      };
+      body {
+        font-family: 'Muli', sans-serif;
+      };
+      .bg-dark {
+        background-color: #29527b;
+      }
+    </style>
 
-  <!-- Custom font -->
-  <link href="https://fonts.googleapis.com/css?family=Assistant|Cabin|Indie+Flower|Muli|Nunito&display=swap" rel="stylesheet">
-</head>
+    <link href="static/css/body.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/favicon/favicon-16x16.png">
 
-<body>
+    <!-- Custom font -->
+    <link href="https://fonts.googleapis.com/css?family=Assistant|Cabin|Indie+Flower|Muli|Nunito&display=swap" rel="stylesheet">
+  </head>
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:#29527b">
-    <div class="container">
-      <style>
-        #logo {
-          border-radius: 99%;
-          -webkit-transition: -webkit-transform 0.8s ease-in-out;
-          transition: transform 0.8s ease-in-out
-        }
+  <body>
 
-        #logo:hover {
-          -webkit-transform: rotate(360deg);
-          transform: rotate(360deg)
-        }
-      </style>
-      <a href="http://ml-models.de"><img id="logo" style="width:40px; height:40px" src="static/brain.png" alt="ML-Models.de"></a>
-      <a style="padding-left:7px" class="navbar-brand" href="http://ml-models.de">ML-Models.de</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="http://ml-models.de">Home<span class="sr-only">(current)</span> </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="about" href="#" onclick="aboutFunction()">About</a>
-            <script>
-              function aboutFunction() {
-                alert("Developer:  Christoph Mittendorf \nContact: hello@epicml.net");
-              }
-            </script>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <div class="bd-pageheader text-center text-sm-left" style="background-color: #228de8; height:140px; color: white">
-    <div class="container">
-      <!-- Title Content ---------------------------------------------------------------------------------------------------------->
-      <h1 id="heading_big" style="font-weight:bold">ML Models
-
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:#29527b">
+      <div class="container">
         <style>
-          @media screen and (min-width: 809px) {
-            #heading_big {
-              padding-top: 40px
-            }
+          #logo {
+            border-radius: 99%;
+            -webkit-transition: -webkit-transform 0.8s ease-in-out;
+            transition: transform 0.8s ease-in-out;
           }
-
-          @media screen and (max-width: 809px) {
-            #heading_big {
-              padding-top: 25px
-            }
+          #logo:hover {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
           }
-
-          /*small----------------------------------------------------------------------*/
         </style>
-        <small> - Leverage an AI First World</small>
-      </h1>
+        <a href="http://ml-models.de"><img id="logo" style="width:40px; height:40px" src="static/brain.png" alt="ML-Models.de"></a>
+        <a style="padding-left:7px" class="navbar-brand" href="http://ml-models.de">ML-Models.de</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="http://ml-models.de">Home<span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="about" href="#" onclick="aboutFunction()">About</a>
+              <script>
+                function aboutFunction() {
+                  alert("Developer:  Christoph Mittendorf \nContact: hello@epicml.net");
+                }
+              </script>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="bd-pageheader text-center text-sm-left" style="background-color: #228de8; height:140px; color: white">
+      <div class="container">
+        <!-- Title Content ---------------------------------------------------------------------------------------------------------->
+        <h1 id="heading_big" style="font-weight:bold">ML Models
+
+          <style>
+            @media screen and (min-width: 809px) {
+              #heading_big {
+                padding-top: 40px;
+              }
+            }
+            @media screen and (max-width: 809px) {
+              #heading_big {
+                padding-top: 25px;
+              }
+            }
+            /*small----------------------------------------------------------------------*/
+          </style>
+          <small>
+            - Leverage an AI First World</small>
+        </h1>
+      </div>
     </div>
-  </div>
 
-  <!-- Page Content -->
-  <div class="container" style="padding-top:30px">
-    <div class="row">
-      <div class="col-md-8">
+    <!-- Page Content -->
+    <div class="container" style="padding-top:30px">
+      <div class="row">
+        <div class="col-md-8">
 
+          <!-- 7 Lotto-Insights ---------------------------------------------------------------------------------------------------------->
+          <div class="card mb-4">
+            <div class="card-body">
+              <h2 class="card-title">Clustering Application</h2>
+              <p class="card-text"></p>
+              <div class="image menu">
+                <img style="display:block; margin:auto" class="img-fluid rounded" src="static/post_7_clustering_app3.jpg" alt="Clustering Application">
+              </div>
+            </div>
 
-        <!-- 6 Lotto-Insights ---------------------------------------------------------------------------------------------------------->
-        <div class="card mb-4">
-          <div class="card-body">
-            <h2 class="card-title">Lotto-Insights Application</h2>
-            <p class="card-text"></p>
-            <div class="image menu">
+            <div class="card-footer text-muted">
+              <p style="padding:0; margin:0">
+                <b>
+                  <a href="https://ml-clustering.ew.r.appspot.com" target="_blank">>> Application</a>
+                </b>
+              </p>
+              <p style="padding:0; margin:0">
+                <a href="https://github.com/Cassini-chris/Clustering-App" target="_blank">>> GitHub Repo</a>
+              </p>
+              <span>Date: Nov 2021 || Version: 1.0</span>
+            </div>
+          </div>
+
+          <!-- 6 Lotto-Insights ---------------------------------------------------------------------------------------------------------->
+          <div class="card mb-4">
+            <div class="card-body">
+              <h2 class="card-title">Lotto-Insights Application</h2>
+              <p class="card-text"></p>
+              <div class="image menu">
                 <img style="display:block; margin:auto" class="img-fluid rounded" src="static/lotto.jpg" alt="Lotto-Insights">
+              </div>
             </div>
-          </div>
 
-          <div class="card-footer text-muted">
-             <p style="padding:0; margin:0"><b><a href="https://lotto-insights.de/" target="_blank">>> Application</a></b></p>
-             <p style="padding:0; margin:0"><a href="https://github.com/Cassini-chris/Lotto-Insights" target="_blank">>> GitHub Repo</a></p>
+            <div class="card-footer text-muted">
+              <p style="padding:0; margin:0">
+                <b>
+                  <a href="https://lotto-insights.de/" target="_blank">>> Application</a>
+                </b>
+              </p>
+              <p style="padding:0; margin:0">
+                <a href="https://github.com/Cassini-chris/Lotto-Insights" target="_blank">>> GitHub Repo</a>
+              </p>
               <span>Date: October 2021 || Version: 1.0</span>
+            </div>
           </div>
-        </div>
 
-        <!-- 5 Model Overwatch ---------------------------------------------------------------------------------------------------------->
-        <div class="card mb-4">
-          <div class="card-body">
-            <h2 class="card-title">Overwatch Image Classification</h2>
-            <p class="card-text"></p>
-            <div class="image menu">
+          <!-- 5 Model Overwatch ---------------------------------------------------------------------------------------------------------->
+          <div class="card mb-4">
+            <div class="card-body">
+              <h2 class="card-title">Overwatch Image Classification</h2>
+              <p class="card-text"></p>
+              <div class="image menu">
                 <img style="display:block; margin:auto" class="img-fluid rounded" src="static/overwatch_background.png" alt="Overwatch">
+              </div>
             </div>
-          </div>
 
-          <div class="card-footer text-muted">
-             <p style="padding:0; margin:0"><b><a href="https://storage.googleapis.com/epicml_public_bucket/01_ml_models/05_overwatch_model/overwatch_model.h5" target="_blank">>> Download ML-Model (HDF5 format)</a></b></p>
-             <p style="padding:0; margin:0"><a href="https://github.com/Cassini-chris/Transfer_Learning_Image_Classification_Overwatch" target="_blank">>> GitHub Repo</a></p>
-              <p style="padding:0; margin:0"><a href="https://www.kaggle.com/magicchris/overwatch-characters" target="_blank">>> Kaggle Dataset</a></p>
-              <p><a href="https://colab.research.google.com/github/Cassini-chris/Transfer_Learning_Image_Classification_Overwatch/blob/main/Transfer_Learning_Overwatch_Classification.ipynb" target="_blank">>> Colab Notebook</a></p>
+            <div class="card-footer text-muted">
+              <p style="padding:0; margin:0">
+                <b>
+                  <a href="https://storage.googleapis.com/epicml_public_bucket/01_ml_models/05_overwatch_model/overwatch_model.h5" target="_blank">>> Download ML-Model (HDF5 format)</a>
+                </b>
+              </p>
+              <p style="padding:0; margin:0">
+                <a href="https://github.com/Cassini-chris/Transfer_Learning_Image_Classification_Overwatch" target="_blank">>> GitHub Repo</a>
+              </p>
+              <p style="padding:0; margin:0">
+                <a href="https://www.kaggle.com/magicchris/overwatch-characters" target="_blank">>> Kaggle Dataset</a>
+              </p>
+              <p>
+                <a href="https://colab.research.google.com/github/Cassini-chris/Transfer_Learning_Image_Classification_Overwatch/blob/main/Transfer_Learning_Overwatch_Classification.ipynb" target="_blank">>> Colab Notebook</a>
+              </p>
               <span>Date: September 2021 || Version: 1.0</span>
+            </div>
           </div>
-        </div>
 
-
-        <!-- 4 Model Corona---------------------------------------------------------------------------------------------------------->
-        <div class="card mb-4">
-          <div class="card-body">
-            <h2 class="card-title">Betacoronaviruses</h2>
-            <p class="card-text"></p>
-            <div class="image menu">
+          <!-- 4 Model Corona---------------------------------------------------------------------------------------------------------->
+          <div class="card mb-4">
+            <div class="card-body">
+              <h2 class="card-title">Betacoronaviruses</h2>
+              <p class="card-text"></p>
+              <div class="image menu">
                 <img style="display:block; margin:auto" class="img-fluid rounded" src="static/beta_background2.JPG" alt="Betacoronavirus">
+              </div>
             </div>
-          </div>
 
-          <div class="card-footer text-muted">
-             <p style="padding:0; margin:0;"><b><a href="https://storage.googleapis.com/epicml_public_bucket/01_ml_models/04_Betacoronavirus/SARS-Cov-1%20%26%20SARS-Cov-2.mp4" target="_blank">>> Plotting Betacoronaviruses</a></b></p>
-             <p><a href="https://github.com/Cassini-chris/Coronavirus" target="_blank">>> GitHub Repo</a></p>
+            <div class="card-footer text-muted">
+              <p style="padding:0; margin:0;">
+                <b>
+                  <a href="https://storage.googleapis.com/epicml_public_bucket/01_ml_models/04_Betacoronavirus/SARS-Cov-1%20%26%20SARS-Cov-2.mp4" target="_blank">>> Plotting Betacoronaviruses</a>
+                </b>
+              </p>
+              <p>
+                <a href="https://github.com/Cassini-chris/Coronavirus" target="_blank">>> GitHub Repo</a>
+              </p>
               <span>Date: May 2021 || Version: 1.0</span>
+            </div>
           </div>
-        </div>
 
+          <!-- 3 Model Disney Princess---------------------------------------------------------------------------------------------------------->
+          <div class="card mb-4">
+            <div class="card-body">
+              <h2 class="card-title">Disney Princess Image Classification</h2>
+              <p class="card-text"></p>
 
-        <!-- 3 Model Disney Princess---------------------------------------------------------------------------------------------------------->
-        <div class="card mb-4">
-          <div class="card-body">
-            <h2 class="card-title">Disney Princess Image Classification</h2>
-            <p class="card-text"></p>
-
-            <div class="image menu">
+              <div class="image menu">
                 <img style="display:block; margin:auto" class="img-fluid rounded" src="static/disney.png" alt="ML-Model">
+              </div>
+
             </div>
 
-          </div>
-
-          <div class="card-footer text-muted">
-             <p style="padding:0; margin:0;"><b><a href="https://epicml.uc.r.appspot.com/" target="_blank">>> Application</a></b></p>
-             <p><a href="https://github.com/Cassini-chris/Transfer-Learning-Image-Classification_Disney" target="_blank">>> GitHub Repo</a></p>
+            <div class="card-footer text-muted">
+              <p style="padding:0; margin:0;">
+                <b>
+                  <a href="https://epicml.uc.r.appspot.com/" target="_blank">>> Application</a>
+                </b>
+              </p>
+              <p>
+                <a href="https://github.com/Cassini-chris/Transfer-Learning-Image-Classification_Disney" target="_blank">>> GitHub Repo</a>
+              </p>
               <span>Date: May 2021 || Version: 2.0</span>
+            </div>
           </div>
-        </div>
 
-        <!-- 2 Model Style Transfer ---------------------------------------------------------------------------------------------------------->
-        <div class="card mb-4">
-          <div class="card-body">
-            <h2 class="card-title">Free Style Transfer</h2>
-            <p class="card-text"></p>
+          <!-- 2 Model Style Transfer ---------------------------------------------------------------------------------------------------------->
+          <div class="card mb-4">
+            <div class="card-body">
+              <h2 class="card-title">Free Style Transfer</h2>
+              <p class="card-text"></p>
 
-            <div class="image menu">
+              <div class="image menu">
                 <img style="display:block; margin:auto" class="img-fluid rounded" src="static/free_style_transfer.jpg" alt="ML-Model">
+              </div>
+
             </div>
 
-          </div>
-
-          <div class="card-footer text-muted">
-             <p style="padding:0; margin:0;"><b><a href="http://free-style-transfer.icu/" target="_blank">>> Application</a></b></p>
-             <p><a href="https://github.com/Cassini-chris/Free-Style-Transfer" target="_blank">>> GitHub Repo</a></p>
+            <div class="card-footer text-muted">
+              <p style="padding:0; margin:0;">
+                <b>
+                  <a href="http://free-style-transfer.icu/" target="_blank">>> Application</a>
+                </b>
+              </p>
+              <p>
+                <a href="https://github.com/Cassini-chris/Free-Style-Transfer" target="_blank">>> GitHub Repo</a>
+              </p>
               <span>Date: Nov 2020 || Version: 1.0</span>
+            </div>
           </div>
-        </div>
 
+          <!-- 1 Model RunCulator---------------------------------------------------------------------------------------------------------->
+          <div class="card mb-4">
+            <div class="card-body">
+              <h2 class="card-title">RunCulator</h2>
+              <p class="card-text"></p>
 
-        <!-- 1 Model RunCulator---------------------------------------------------------------------------------------------------------->
-        <div class="card mb-4">
-          <div class="card-body">
-            <h2 class="card-title">RunCulator</h2>
-            <p class="card-text"></p>
-
-            <div class="image menu">
+              <div class="image menu">
                 <img style="display:block; margin:auto" class="img-fluid rounded" src="static/run_back2.png" alt="ML-Model">
+              </div>
+
             </div>
 
-          </div>
-
-          <div class="card-footer text-muted">
-             <p style="padding:0; margin:0;"><b><a href="https://www.runculator.com/" target="_blank">>> Application</b></a></p>
-             <p><a href="https://github.com/Cassini-chris/RunCulator" target="_blank">>> GitHub Repo</a></p>
+            <div class="card-footer text-muted">
+              <p style="padding:0; margin:0;">
+                <b>
+                  <a href="https://www.runculator.com/" target="_blank">>> Application</b>
+                </a>
+              </p>
+              <p>
+                <a href="https://github.com/Cassini-chris/RunCulator" target="_blank">>> GitHub Repo</a>
+              </p>
               <span>Date: Jun 2020 || Version: 1.1</span>
+            </div>
           </div>
+
         </div>
 
-</div>
-
-
-      <!-- Sidebar Widgets Column -->
-      <div class="col-md-4">
-        <div class="card my-4">
-          <h5 class="card-header">Resources</h5>
-          <div class="card-body">
-            <div class="row">
-              <div class="col-lg-6">
-                <ul class="list-unstyled mb-0">
-                  <li>
-                    <a href="https://github.com/Cassini-chris" target="_blank">My GitHub</a>
-                  </li>
-                  <li>
-                    <a href="https://epicml.net/" target="_blank">EpicML Blog</a>
-                  </li>
-                  <li>
-                    <a href="https://scholar.google.de/citations?user=qpvuBUMAAAAJ&hl=en" target="_blank">Google Scholar</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul class="list-unstyled mb-0">
-                  <li>
-                    <a href="https://www.linkedin.com/in/dr-christoph-mittendorf/" target="_blank">LinkedIn</a>
-                  </li>
-                  <li>
-                    <a href="https://twitter.com/Chris4Athletics" target="_blank">Twitter</a>
-                  </li>
-                  <li>
-                    <a href="mailto:hello@epicml.net" target="_blank">Contact</a>
-                  </li>
-                </ul>
+        <!-- Sidebar Widgets Column -->
+        <div class="col-md-4">
+          <div class="card my-4">
+            <h5 class="card-header">Resources</h5>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-lg-6">
+                  <ul class="list-unstyled mb-0">
+                    <li>
+                      <a href="https://github.com/Cassini-chris" target="_blank">My GitHub</a>
+                    </li>
+                    <li>
+                      <a href="https://epicml.net/" target="_blank">EpicML Blog</a>
+                    </li>
+                    <li>
+                      <a href="https://scholar.google.de/citations?user=qpvuBUMAAAAJ&hl=en" target="_blank">Google Scholar</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-6">
+                  <ul class="list-unstyled mb-0">
+                    <li>
+                      <a href="https://www.linkedin.com/in/dr-christoph-mittendorf/" target="_blank">LinkedIn</a>
+                    </li>
+                    <li>
+                      <a href="https://twitter.com/Chris4Athletics" target="_blank">Twitter</a>
+                    </li>
+                    <li>
+                      <a href="mailto:hello@epicml.net" target="_blank">Contact</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="card my-4">
-          <h5 class="card-header">Overview</h5>
-          <div class="card-body">
+          <div class="card my-4">
+            <h5 class="card-header">Overview</h5>
+            <div class="card-body">
 
-            <p>ML-Models.de holds a collection of my latest ML models and educational apps.</p>
-            <p><b>All ML-Models are:</b></p>
-            <ul>
-              <li>Opensource</li>
-              <li>Built for educational purposes</li>
-              <li>Free to use</li>
-              <li>& Fun!</li>
-            </ul>
-            <p><i># Cheers Christoph Mittendorf</i></p>
+              <p>ML-Models.de holds a collection of my latest ML models and educational apps.</p>
+              <p>
+                <b>All ML-Models are:</b>
+              </p>
+              <ul>
+                <li>Opensource</li>
+                <li>Built for educational purposes</li>
+                <li>Free to use</li>
+                <li>& Fun!</li>
+              </ul>
+              <p>
+                <i># Cheers Christoph Mittendorf</i>
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <!-- /.container -->
-
-  <!-- Footer -->
-  <footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">Mittendorf - 2021</p>
     </div>
     <!-- /.container -->
-  </footer>
 
-  <!-- Bootstrap core JavaScript
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Mittendorf - 2021</p>
+      </div>
+      <!-- /.container -->
+    </footer>
 
-</body>
+    <!-- Bootstrap core JavaScript -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+  </body>
 
 </html>
