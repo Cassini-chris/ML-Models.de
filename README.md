@@ -9,7 +9,7 @@ All ML-Models are:
 - [x] & Fun!
 
 Please checkout:
-## [>>> Final Website](https://http://ml-models.de/// "ML-Models")
+## [>>> Final Website](http://http://ml-models.de/ "ML-Models")
 
 <img src="https://github.com/Cassini-chris/ML-Models.de/blob/main/_GITHUB/readme/images/ml-models.png" alt="ML-models" width="60%">
 
