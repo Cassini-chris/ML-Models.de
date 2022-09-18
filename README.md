@@ -13,6 +13,5 @@ Please checkout:
 
 <img src="https://github.com/Cassini-chris/ML-Models.de/blob/main/_GITHUB/readme/images/ml-models.png" alt="ML-models" width="60%">
 
-# Cheers Christoph Mittendorf
-
+### Cheers Christoph Mittendorf
 Disclaimer: This is not an officially supported Google product
